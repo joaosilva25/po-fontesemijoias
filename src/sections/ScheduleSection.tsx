@@ -1,4 +1,3 @@
-import { FadeIn } from '../components/ui/FadeIn'
 import { ContentList, ContentListItem } from '../components/ui/ContentList'
 import { Container } from '../components/ui/Container'
 import { SectionHeader } from '../components/ui/SectionHeader'
@@ -8,14 +7,13 @@ export function ScheduleSection() {
   return (
     <section id="programacao" className="section-padding relative scroll-mt-20">
       <Container className="relative">
-        <FadeIn>
-          <SectionHeader
-            title={SCHEDULE.title}
-            titleHighlight={SCHEDULE.titleHighlight}
-          />
-        </FadeIn>
+        <SectionHeader
+          eyebrow={SCHEDULE.eyebrow}
+          title={SCHEDULE.title}
+          titleHighlight={SCHEDULE.titleHighlight}
+        />
 
-        <FadeIn delay={0.15} className="mx-auto mt-14 max-w-xl md:mt-16">
+        <div className="mx-auto mt-14 max-w-xl md:mt-16">
           <ContentList>
             {SCHEDULE.days.map((day) => (
               <ContentListItem
@@ -28,7 +26,7 @@ export function ScheduleSection() {
               </ContentListItem>
             ))}
           </ContentList>
-        </FadeIn>
+        </div>
       </Container>
     </section>
   )

@@ -1,71 +1,94 @@
-import { Circle, Crown, Gem, Heart, Link, Sparkles } from 'lucide-react'
+import { useEffect, useMemo } from 'react'
+import { useReducedMotion } from 'framer-motion'
+import useEmblaCarousel from 'embla-carousel-react'
+import AutoScroll from 'embla-carousel-auto-scroll'
 import { CAROUSEL_ITEMS } from '../constants/event'
 
-const ITEM_ICONS = {
-  Brincos:   Gem,
-  Colares:   Crown,
-  'Anéis':   Circle,
-  Pulseiras: Link,
-  Conjuntos: Sparkles,
-  Piercing:  Heart,
-} as const
+const SLIDES = [...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS]
 
-type ItemLabel = keyof typeof ITEM_ICONS
+const EMBLA_OPTIONS = {
+  loop: true,
+  align: 'start' as const,
+  dragFree: true,
+  containScroll: false as const,
+}
 
-function CarouselCard({
-  label,
-  gradient,
-}: {
-  label: string
-  gradient: string
-}) {
-  const Icon = (ITEM_ICONS[label as ItemLabel] ?? Gem)
-
+function CarouselSlide({ src, alt }: { src: string; alt: string }) {
   return (
-    <article
-      className={`group relative h-64 w-52 shrink-0 overflow-hidden rounded-sm border border-gold/10 bg-gradient-to-br ${gradient} shadow-card md:h-72 md:w-60`}
-    >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_15%,rgba(212,175,55,0.15),transparent_60%)]" />
-
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6">
-        <div className="flex h-20 w-20 items-center justify-center rounded-sm border border-gold/25 bg-black/40 backdrop-blur-sm transition-all duration-500 group-hover:scale-105 group-hover:border-gold/45 group-hover:bg-black/55 md:h-24 md:w-24">
-          <Icon
-            size={30}
-            strokeWidth={1}
-            className="text-gold/80 transition-colors duration-300 group-hover:text-gold md:size-9"
-          />
-        </div>
-        <span className="font-display text-lg italic tracking-wide text-ink/80">
-          {label}
-        </span>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
-
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
-    </article>
+    <div className="group/slide relative aspect-square overflow-hidden bg-black">
+      <img
+        src={src}
+        alt={alt}
+        className="jewelry-slide-img h-full w-full object-cover"
+        loading="lazy"
+        draggable={false}
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-[rgba(212,175,55,0.04)] mix-blend-soft-light"
+        aria-hidden="true"
+      />
+    </div>
   )
 }
 
 export function JewelryCarousel() {
-  const items = [...CAROUSEL_ITEMS, ...CAROUSEL_ITEMS]
+  const prefersReducedMotion = useReducedMotion()
+
+  const plugins = useMemo(
+    () =>
+      prefersReducedMotion
+        ? []
+        : [
+            AutoScroll({
+              speed: 0.85,
+              startDelay: 0,
+              playOnInit: true,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ],
+    [prefersReducedMotion],
+  )
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(EMBLA_OPTIONS, plugins)
+
+  useEffect(() => {
+    if (!emblaApi || prefersReducedMotion) return
+    emblaApi.plugins()?.autoScroll?.play()
+  }, [emblaApi, prefersReducedMotion])
 
   return (
-    <div
-      className="relative w-full overflow-hidden py-4"
-      aria-label="Galeria de semijoias"
-    >
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-cream to-transparent md:w-36" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-cream to-transparent md:w-36" />
+    <div className="jewelry-carousel relative w-full" aria-label="Galeria de semijoias">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.22)_0%,rgba(0,0,0,0.1)_35%,rgba(0,0,0,0.03)_62%,transparent_88%)] md:h-32 lg:h-44"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24 bg-[linear-gradient(to_top,rgba(0,0,0,0.22)_0%,rgba(0,0,0,0.1)_35%,rgba(0,0,0,0.03)_62%,transparent_88%)] md:h-32 lg:h-44"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-cream to-transparent sm:w-24 md:w-32"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-cream to-transparent sm:w-24 md:w-32"
+        aria-hidden="true"
+      />
 
-      <div className="carousel-track flex w-max gap-5 px-8 md:gap-6">
-        {items.map((item, index) => (
-          <CarouselCard
-            key={`${item.id}-${index}`}
-            label={item.label}
-            gradient={item.gradient}
-          />
-        ))}
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {SLIDES.map((item, index) => (
+            <div
+              key={`${item.id}-${index}`}
+              className="min-w-0 flex-[0_0_72%] sm:flex-[0_0_48%] md:flex-[0_0_36%] lg:flex-[0_0_28%] xl:flex-[0_0_24%]"
+            >
+              <div className="p-[1px]">
+                <CarouselSlide src={item.src} alt={item.alt} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

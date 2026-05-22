@@ -1,4 +1,5 @@
 import { Ornament } from './Ornament'
+import { SectionEyebrow } from './SectionEyebrow'
 
 type SectionHeaderProps = {
   eyebrow?: string
@@ -19,12 +20,8 @@ export function SectionHeader({
 
   return (
     <header className={`flex max-w-3xl flex-col ${alignClass}`}>
-      {eyebrow && (
-        <p className="mb-4 font-sans text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-gold">
-          {eyebrow}
-        </p>
-      )}
-      <h2 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] font-normal leading-[1.15] tracking-tight text-ink">
+      {eyebrow && <SectionEyebrow>{eyebrow}</SectionEyebrow>}
+      <h2 className="font-display text-[clamp(1.75rem,4vw,2.75rem)] font-normal leading-[1.15] tracking-normal text-ink">
         {title}
         {titleHighlight && (
           <>

@@ -38,7 +38,7 @@ export function Logo({
       aria-label="Xingyu — Fonte das Semijoias"
     >
       <span
-        className={`font-display font-light tracking-[0.14em] ${titleColor} ${titleSizes[size]}`}
+        className={`font-display font-semibold tracking-normal ${titleColor} ${titleSizes[size]}`}
       >
         Xingyu
       </span>

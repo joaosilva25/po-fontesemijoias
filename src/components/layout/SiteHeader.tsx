@@ -16,7 +16,7 @@ export function SiteHeader() {
           className="transition-opacity duration-300 hover:opacity-80"
           aria-label="Xingyu — início"
         >
-          <BrandMark size="sm" className="items-start gap-1" />
+          <BrandMark size="sm" />
         </a>
 
         <nav
@@ -36,8 +36,6 @@ export function SiteHeader() {
 
         <a
           href={EVENT_GROUP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
           className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-gold transition-opacity duration-300 hover:opacity-75"
         >
           Entrar

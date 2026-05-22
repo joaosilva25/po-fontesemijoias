@@ -1,4 +1,7 @@
-export const EVENT_GROUP_URL = '#grupo'
+export const WHATSAPP_GROUP_URL =
+  'https://chat.whatsapp.com/HCUO7AfGW1x05XHk2fTi1Z'
+
+export const EVENT_GROUP_URL = '/redirect'
 
 export const EVENT_DATES = 'De 09 a 11 de Junho | Aulas e lives especiais'
 
@@ -12,10 +15,11 @@ export const HERO = {
     'Entre para o evento e entenda como funciona o caminho por trás das peças que chegam ao mercado: da fábrica na China até a revenda no Brasil.',
   audience:
     'Um evento para quem já vende semijoias, quer começar a vender ou busca um fornecedor com mais variedade, qualidade e oportunidade de lucro.',
-  cta: 'Quero entrar no grupo do evento',
+  cta: 'Entrar no grupo do evento',
 } as const
 
 export const AUDIENCE = {
+  eyebrow: 'Para quem vende',
   title: 'Esse evento é para você que quer',
   titleHighlight: 'vender semijoias com mais estratégia',
   intro:
@@ -32,6 +36,7 @@ export const AUDIENCE = {
 } as const
 
 export const IMPORT = {
+  eyebrow: 'Conteúdo do evento',
   title: 'Uma visão clara sobre importação,',
   titleHighlight: 'fornecedor e venda de semijoias',
   intro:
@@ -49,15 +54,13 @@ export const IMPORT = {
 } as const
 
 export const CAROUSEL_ITEMS = [
-  { id: '1', label: 'Brincos', gradient: 'from-stone-900 via-stone-800 to-amber-950' },
-  { id: '2', label: 'Colares', gradient: 'from-neutral-900 via-stone-900 to-yellow-950' },
-  { id: '3', label: 'Anéis', gradient: 'from-zinc-900 via-neutral-900 to-amber-950' },
-  { id: '4', label: 'Pulseiras', gradient: 'from-stone-950 via-zinc-900 to-yellow-950' },
-  { id: '5', label: 'Conjuntos', gradient: 'from-neutral-950 via-stone-900 to-amber-950' },
-  { id: '6', label: 'Piercing', gradient: 'from-zinc-950 via-stone-900 to-yellow-950' },
+  { id: '1', src: '/img1.webp', alt: 'Semijoias em destaque' },
+  { id: '2', src: '/img2.webp', alt: 'Semijoias em destaque' },
+  { id: '3', src: '/img3.jpg', alt: 'Semijoias em destaque' },
 ] as const
 
 export const SCHEDULE = {
+  eyebrow: '09 a 18 de junho',
   title: 'Programação do evento',
   titleHighlight: 'Fonte das Semijoias',
   days: [
@@ -95,6 +98,7 @@ export const SCHEDULE = {
 } as const
 
 export const FINAL_CTA = {
+  eyebrow: 'Evento gratuito',
   title: 'Entre agora para o grupo oficial do evento',
   description:
     'É pelo grupo que você vai receber os avisos, horários, links das lives e informações importantes da Fonte das Semijoias.',

@@ -1,34 +1,59 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import type { ReactNode } from 'react'
+import {
+  defaultViewport,
+  sectionReveal,
+  sectionRevealGentle,
+} from '../../lib/motion'
+import { SectionBackdrop } from './SectionBackdrop'
+
+type ScrollSectionVariant = 'default' | 'gentle'
 
 type ScrollSectionProps = {
   children: ReactNode
   className?: string
-  delay?: number
+  variant?: ScrollSectionVariant
+  withBackdrop?: boolean
+  backdropGrayscale?: boolean
 }
 
-const ease = [0.22, 1, 0.36, 1] as const
+const variants = {
+  default: sectionReveal,
+  gentle: sectionRevealGentle,
+} as const
 
 export function ScrollSection({
   children,
   className = '',
-  delay = 0,
+  variant = 'default',
+  withBackdrop = true,
+  backdropGrayscale = true,
 }: ScrollSectionProps) {
   const prefersReducedMotion = useReducedMotion()
 
+  const rootClassName = `relative ${className}`.trim()
+  const content = withBackdrop ? (
+    <>
+      <SectionBackdrop grayscale={backdropGrayscale} />
+      <div className="relative z-10">{children}</div>
+    </>
+  ) : (
+    children
+  )
+
   if (prefersReducedMotion) {
-    return <div className={className}>{children}</div>
+    return <div className={rootClassName}>{content}</div>
   }
 
   return (
     <motion.div
-      className={className}
-      initial={{ opacity: 0, y: 48 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.15, margin: '-60px 0px -80px 0px' }}
-      transition={{ duration: 0.9, delay, ease }}
+      className={rootClassName}
+      initial="hidden"
+      whileInView="visible"
+      viewport={defaultViewport}
+      variants={variants[variant]}
     >
-      {children}
+      {content}
     </motion.div>
   )
 }
