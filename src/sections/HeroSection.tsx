@@ -27,30 +27,17 @@ export function HeroSection() {
     <section className="relative flex min-h-svh flex-col justify-center overflow-hidden pb-20 pt-17">
 
       <div
-        className="pointer-events-none absolute inset-0 bg-[url('/HeroMobile.png')] bg-cover bg-top bg-no-repeat md:bg-[url('/Hero.png')] md:bg-center"
+        className="pointer-events-none absolute inset-0 bg-[url('/HeroMobile.png')] bg-cover opacity-70 bg-top bg-no-repeat md:bg-[url('/Hero.png')] md:bg-center"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute inset-0 bg-black/70"
+        className="pointer-events-none absolute inset-0 bg-black/80"
         aria-hidden="true"
       />
       <div
-        className="animate-float pointer-events-none absolute right-[6%] top-[18%] hidden h-48 w-48 rounded-full border border-gold/15 opacity-60 md:block"
+        className="section-edge-fade-bottom pointer-events-none absolute inset-x-0 bottom-0 h-32 md:h-40 lg:h-52"
         aria-hidden="true"
       />
-      <div
-        className="animate-float-slow animation-delay-300 pointer-events-none absolute right-[7%] top-[20%] hidden h-32 w-32 rounded-full border border-gold/8 opacity-40 md:block"
-        aria-hidden="true"
-      />
-      <div
-        className="animate-float-slow pointer-events-none absolute bottom-[28%] left-[4%] h-28 w-28 rounded-full border border-gold/12 opacity-40 md:h-36 md:w-36"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-[38vh] min-h-[11rem] max-h-[22rem] bg-[linear-gradient(to_top,var(--color-cream)_0%,color-mix(in_srgb,var(--color-cream)_92%,transparent)_28%,color-mix(in_srgb,var(--color-cream)_45%,transparent)_58%,transparent_100%)]"
-        aria-hidden="true"
-      />
-
       {prefersReducedMotion ? (
 
         <div className="relative z-10 w-full">
@@ -59,13 +46,13 @@ export function HeroSection() {
 
             <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
 
-              <div className="mb-6 flex justify-center">
+              <div className="mb-8 flex justify-center">
 
                 <BrandMark size="md" />
 
               </div>
 
-              <h1 className="text-balance font-display text-[clamp(1.875rem,4.5vw,3.375rem)] font-normal leading-[1.15] tracking-normal text-ink">
+              <h1 className="text-balance font-display font-normal tracking-normal text-ink">
 
                 {HERO.title.lead}{' '}
 
@@ -91,17 +78,21 @@ export function HeroSection() {
 
               </div>
 
-              <p className="mt-2 max-w-2xl font-sans text-base leading-relaxed text-ink-soft sm:mt-0 md:text-lg">
+              <div className="mx-auto mt-6 w-full max-w-2xl text-center md:mt-10">
 
-                {HERO.subtitle}
+                <p className="font-sans text-base leading-relaxed text-ink-soft md:text-lg">
 
-              </p>
+                  {HERO.subtitle}
 
-              <p className="mt-4 max-w-xl font-sans text-sm leading-relaxed text-muted md:text-[0.9375rem]">
+                </p>
 
-                {HERO.audience}
+                <p className="mt-4 font-sans text-sm leading-relaxed text-muted md:mt-5 md:text-[0.9375rem]">
 
-              </p>
+                  {HERO.audience}
+
+                </p>
+
+              </div>
 
               <div className="mt-6 flex justify-center">
 
@@ -151,7 +142,7 @@ export function HeroSection() {
 
             <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
 
-              <motion.div variants={heroItem} className="mb-6 flex justify-center">
+              <motion.div variants={heroItem} className="mb-12 flex justify-center">
 
                 <BrandMark size="md" />
 
@@ -163,7 +154,7 @@ export function HeroSection() {
 
                 variants={heroItem}
 
-                className="text-balance font-display text-[clamp(1.875rem,4.5vw,3.375rem)] font-normal leading-[1.15] tracking-normal text-ink"
+                className="text-balance font-display font-normal tracking-normal text-ink"
 
               >
 
@@ -195,31 +186,29 @@ export function HeroSection() {
 
 
 
-              <motion.p
+              <motion.div
 
                 variants={heroItem}
 
-                className="mt-2 max-w-2xl font-sans text-base leading-relaxed text-ink-soft sm:mt-0 md:text-lg"
+                className="mx-auto mt-6 w-full max-w-2xl text-center md:mt-10"
 
               >
 
-                {HERO.subtitle}
+                <p className="font-sans text-base leading-relaxed text-ink-soft md:text-lg">
 
-              </motion.p>
+                  {HERO.subtitle}
+
+                </p>
 
 
 
-              <motion.p
+                <p className="mt-4 font-sans text-sm leading-relaxed text-muted md:mt-5 md:text-[0.9375rem]">
 
-                variants={heroItem}
+                  {HERO.audience}
 
-                className="mt-4 max-w-xl font-sans text-sm leading-relaxed text-muted md:text-[0.9375rem]"
+                </p>
 
-              >
-
-                {HERO.audience}
-
-              </motion.p>
+              </motion.div>
 
 
 

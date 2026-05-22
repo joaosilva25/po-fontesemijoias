@@ -4,8 +4,9 @@
 @source "./**/*.{tsx,ts,jsx,js}";
 
 @theme {
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  --font-display: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --font-sans: "Sora", system-ui, sans-serif;
+  --leading-title: 1.3;
 
   /* Cinematic noir palette */
   --color-cream: #000000;
@@ -39,11 +40,40 @@
 
 h1,
 h2,
-h3,
 .font-display {
   font-family: var(--font-display);
-  line-height: 1.15;
   letter-spacing: -0.01em;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  line-height: var(--leading-title);
+}
+
+h1 {
+  font-size: clamp(1.5rem, 3.75vw, 2.75rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4.75vw, 2rem);
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: clamp(1.625rem, 5.25vw, 2.25rem);
+  }
+}
+
+h3.font-display {
+  font-size: 1.0625rem;
+}
+
+@media (min-width: 768px) {
+  h3.font-display {
+    font-size: 1.25rem;
+  }
 }
 
 body {
@@ -69,6 +99,28 @@ body {
 
 .section-padding-sm {
   padding-block: 4rem;
+}
+
+.section-edge-fade-top {
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.94) 14%,
+    rgba(0, 0, 0, 0.62) 38%,
+    rgba(0, 0, 0, 0.22) 62%,
+    transparent 100%
+  );
+}
+
+.section-edge-fade-bottom {
+  background: linear-gradient(
+    to top,
+    #000 0%,
+    rgba(0, 0, 0, 0.94) 14%,
+    rgba(0, 0, 0, 0.62) 38%,
+    rgba(0, 0, 0, 0.22) 62%,
+    transparent 100%
+  );
 }
 
 @media (min-width: 768px) {

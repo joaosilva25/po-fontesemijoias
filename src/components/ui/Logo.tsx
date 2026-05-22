@@ -7,9 +7,9 @@ type LogoProps = {
 }
 
 const titleSizes = {
-  sm: 'text-2xl',
-  md: 'text-3xl',
-  lg: 'text-[clamp(2.5rem,5vw,3.5rem)]',
+  sm: 'text-xl',
+  md: 'text-2xl',
+  lg: 'text-[clamp(2rem,4vw,2.75rem)]',
 }
 
 export function Logo({
@@ -38,7 +38,7 @@ export function Logo({
       aria-label="Xingyu — Fonte das Semijoias"
     >
       <span
-        className={`font-display font-semibold tracking-normal ${titleColor} ${titleSizes[size]}`}
+        className={`font-display font-medium uppercase leading-[var(--leading-title)] tracking-normal ${titleColor} ${titleSizes[size]}`}
       >
         Xingyu
       </span>

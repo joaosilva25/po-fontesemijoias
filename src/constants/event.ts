@@ -28,12 +28,27 @@ export const AUDIENCE = {
   intro:
     'A Fonte das Semijoias foi criado para quem olha para o mercado de semijoias e sabe que existe oportunidade, mas ainda sente dificuldade em encontrar bons produtos, bons preços e margens que realmente façam sentido.',
   subtitle: 'É para quem:',
-  items: [
-    'Já vende semijoias e quer melhorar sua margem de lucro.',
-    'Vende outros produtos e quer adicionar uma nova linha com alto potencial de revenda.',
-    'Tem vontade de começar, mas ainda não sabe por onde comprar.',
-    'Quer entender como funciona a importação direto da fábrica.',
-    'Busca peças com qualidade, variedade e preço competitivo.',
+  points: [
+    {
+      label: 'Margem',
+      text: 'Já vende semijoias e quer melhorar sua margem de lucro.',
+    },
+    {
+      label: 'Nova linha',
+      text: 'Vende outros produtos e quer adicionar uma nova linha com alto potencial de revenda.',
+    },
+    {
+      label: 'Primeiro passo',
+      text: 'Tem vontade de começar, mas ainda não sabe por onde comprar.',
+    },
+    {
+      label: 'Importação',
+      text: 'Quer entender como funciona a importação direto da fábrica.',
+    },
+    {
+      label: 'Qualidade',
+      text: 'Busca peças com qualidade, variedade e preço competitivo.',
+    },
   ],
   closing: 'Aqui, a ideia é simples: mostrar como comprar melhor para vender melhor.',
 } as const
@@ -45,12 +60,27 @@ export const IMPORT = {
   intro:
     'Durante o evento, vamos mostrar por que comprar direto da fonte pode ser uma grande vantagem para quem quer trabalhar com semijoias.',
   subtitle: 'Você vai entender:',
-  items: [
-    'Por que comprar direto da fábrica pode aumentar suas margens.',
-    'Como funciona o processo de importação de semijoias.',
-    'Quais cuidados você precisa ter antes de escolher um fornecedor.',
-    'Como se posicionar melhor como importadora ou revendedora.',
-    'Como enxergar a semijoia como um produto de venda recorrente e lucrativo.',
+  topics: [
+    {
+      label: 'Margem',
+      text: 'Por que comprar direto da fábrica pode aumentar suas margens.',
+    },
+    {
+      label: 'Importação',
+      text: 'Como funciona o processo de importação de semijoias.',
+    },
+    {
+      label: 'Fornecedor',
+      text: 'Quais cuidados você precisa ter antes de escolher um fornecedor.',
+    },
+    {
+      label: 'Posicionamento',
+      text: 'Como se posicionar melhor como importadora ou revendedora.',
+    },
+    {
+      label: 'Recorrência',
+      text: 'Como enxergar a semijoia como um produto de venda recorrente e lucrativo.',
+    },
   ],
   closing:
     'Além disso, você também vai conhecer melhor a Xingyu, entender a qualidade das peças e ver oportunidades especiais durante as lives.',

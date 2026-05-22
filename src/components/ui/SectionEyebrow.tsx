@@ -33,7 +33,7 @@ export function SectionEyebrow({
         aria-hidden="true"
       />
       <span
-        className={`min-w-0 max-w-full text-balance text-center font-sans font-semibold uppercase text-gold/70 ${styles.text}`}
+        className={`min-w-0 max-w-full text-balance text-center font-sans font-medium uppercase text-gold/70 ${styles.text}`}
       >
         {children}
       </span>
