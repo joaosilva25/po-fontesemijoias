@@ -9,8 +9,8 @@ export function ScrollToTop() {
     if (!hero) return
 
     const observer = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { threshold: 0 },
+      ([entry]) => setVisible(entry.intersectionRatio < 0.35),
+      { threshold: [0, 0.35, 0.5, 0.75, 1] },
     )
 
     observer.observe(hero)

@@ -28,7 +28,7 @@ export function ScrollSection({
   className = '',
   variant = 'default',
   withBackdrop = true,
-  backdropGrayscale = true,
+  backdropGrayscale = false,
   backdropProminent = false,
 }: ScrollSectionProps) {
   const prefersReducedMotion = useReducedMotion()

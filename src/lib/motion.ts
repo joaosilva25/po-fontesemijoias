@@ -89,15 +89,15 @@ export const heroItemFade: Variants = {
   },
 }
 
-/** Replays on every enter/exit — animation resets when the section leaves the viewport. */
+/** Animates once on first enter — avoids flicker when scrolling back to the hero. */
 export const defaultViewport = {
-  once: false,
+  once: true,
   amount: 0.15,
   margin: '0px 0px -8% 0px',
 } as const
 
 export const heroViewport = {
-  once: false,
+  once: true,
   amount: 0.25,
   margin: '0px 0px -5% 0px',
 } as const
