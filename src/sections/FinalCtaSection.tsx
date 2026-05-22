@@ -9,7 +9,7 @@ export function FinalCtaSection() {
       <Container className="flex flex-col items-center text-center">
         <SectionEyebrow>{FINAL_CTA.eyebrow}</SectionEyebrow>
 
-        <h2 className="max-w-2xl font-display text-[clamp(2rem,4.5vw,3.25rem)] font-normal leading-[1.15] text-ink">
+        <h2 className="max-w-[19rem] font-display text-[clamp(1.75rem,4.8vw,3.25rem)] font-normal leading-[1.22] text-balance text-pretty text-ink min-[400px]:max-w-[21rem] sm:max-w-2xl">
           {FINAL_CTA.title}
         </h2>
 

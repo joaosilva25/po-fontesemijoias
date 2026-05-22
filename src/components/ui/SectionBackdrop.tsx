@@ -8,7 +8,7 @@ export function SectionBackdrop({ grayscale = true }: SectionBackdropProps) {
       <div
         className={`absolute inset-0 bg-[url('/BannerMobile.png')] bg-cover bg-center bg-no-repeat opacity-95 md:bg-[url('/Banner.png')] ${grayscale ? 'grayscale' : ''}`}
       />
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-black/50" />
     </div>
   )
 }

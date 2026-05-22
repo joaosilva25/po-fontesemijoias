@@ -20,8 +20,8 @@ export const HERO = {
 
 export const AUDIENCE = {
   eyebrow: 'Para quem vende',
-  title: 'Esse evento é para você que quer',
-  titleHighlight: 'vender semijoias com mais estratégia',
+  title: 'Esse evento é para você',
+  titleHighlight: 'que quer vender semijoias com mais estratégia',
   intro:
     'A Fonte das Semijoias foi criado para quem olha para o mercado de semijoias e sabe que existe oportunidade, mas ainda sente dificuldade em encontrar bons produtos, bons preços e margens que realmente façam sentido.',
   subtitle: 'É para quem:',
@@ -37,8 +37,8 @@ export const AUDIENCE = {
 
 export const IMPORT = {
   eyebrow: 'Conteúdo do evento',
-  title: 'Uma visão clara sobre importação,',
-  titleHighlight: 'fornecedor e venda de semijoias',
+  title: 'Uma visão clara sobre',
+  titleHighlight: 'importação, fornecedor e venda de semijoias',
   intro:
     'Durante o evento, vamos mostrar por que comprar direto da fonte pode ser uma grande vantagem para quem quer trabalhar com semijoias.',
   subtitle: 'Você vai entender:',
