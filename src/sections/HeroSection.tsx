@@ -24,7 +24,7 @@ export function HeroSection() {
 
   return (
 
-    <section className="relative flex min-h-svh flex-col justify-center overflow-hidden pb-20 pt-17">
+    <section id="hero" className="relative flex min-h-svh flex-col justify-center overflow-hidden pb-20 pt-17">
 
       <div
         className="pointer-events-none absolute inset-0 bg-[url('/HeroMobile.png')] bg-cover opacity-70 bg-top bg-no-repeat md:bg-[url('/Hero.png')] md:bg-center"

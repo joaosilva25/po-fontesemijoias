@@ -31,7 +31,7 @@ function ImportTopicRow({
 }) {
   return (
     <li
-      className={`grid grid-cols-[1fr_auto] items-center gap-5 rounded-full px-5 py-4 sm:gap-8 sm:px-6 sm:py-[1.125rem] ${
+      className={`grid grid-cols-[1fr_auto] items-center gap-5 rounded-full px-6 py-4 sm:gap-8 sm:px-6 sm:py-[1.125rem] ${
         striped ? 'bg-white/[0.04]' : ''
       }`}
     >
@@ -77,7 +77,7 @@ export function ImportSection() {
 
           <div className="mt-14 text-center md:mt-16">
             <Ornament className="mb-7 justify-center" />
-            <p className="text-sm font-regular leading-relaxed text-ink md:text-lg">
+            <p className="text-sm font-regular leading-relaxed text-muted md:text-lg">
               {IMPORT.closing}
             </p>
           </div>

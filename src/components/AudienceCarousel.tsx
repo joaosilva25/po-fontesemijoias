@@ -36,9 +36,9 @@ function AudienceCard({
   Icon: LucideIcon
 }) {
   return (
-    <article className="grid h-[23.5rem] w-full grid-rows-[10rem_4.75rem_1fr] overflow-hidden rounded-2xl border border-gold/12 bg-transparent transition-colors duration-300 hover:border-gold/20">
-      <div className="flex items-center justify-center">
-        <div className="relative flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border border-gold/20 bg-gold/[0.04] shadow-[0_0_28px_-12px_rgba(212,175,55,0.2)]">
+    <article className="flex h-[20rem] w-full flex-col items-center justify-center gap-3.5 overflow-hidden rounded-2xl border border-gold/12 bg-transparent px-5 transition-colors duration-300 hover:border-gold/20 sm:grid sm:h-[23.5rem] sm:grid-rows-[10rem_4.75rem_1fr] sm:gap-0 sm:px-0">
+      <div className="flex shrink-0 items-center justify-center">
+        <div className="relative flex h-[4rem] w-[4rem] items-center justify-center rounded-full border border-gold/20 bg-gold/[0.04] shadow-[0_0_28px_-12px_rgba(212,175,55,0.2)] sm:h-[4.5rem] sm:w-[4.5rem]">
           <div
             className="pointer-events-none absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.1)_0%,transparent_68%)]"
             aria-hidden="true"
@@ -51,7 +51,7 @@ function AudienceCard({
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-end gap-2 px-5 text-center">
+      <div className="flex shrink-0 flex-col items-center gap-2 text-center sm:justify-end sm:px-5">
         <h3 className="font-sans text-[0.72rem] font-semibold leading-tight tracking-[0.1em] text-ink sm:text-[0.78rem]">
           <span className="block whitespace-nowrap">{label}</span>
         </h3>
@@ -60,7 +60,7 @@ function AudienceCard({
         </p>
       </div>
 
-      <div className="flex items-start justify-center px-5 pb-8 pt-3">
+      <div className="flex shrink-0 justify-center sm:items-start sm:px-5 sm:pb-8 sm:pt-3">
         <p className="max-w-[16rem] text-center font-sans text-[0.8125rem] leading-relaxed text-muted">
           {text}
         </p>

@@ -1,6 +1,6 @@
 import { SiteFooter } from '../components/layout/SiteFooter'
-
 import { ScrollSection } from '../components/ui/ScrollSection'
+import { ScrollToTop } from '../components/ui/ScrollToTop'
 
 import { AudienceSection } from '../sections/AudienceSection'
 
@@ -66,6 +66,7 @@ export function EventPage() {
 
       </main>
 
+      <ScrollToTop />
     </>
 
   )
