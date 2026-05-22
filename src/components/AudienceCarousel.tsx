@@ -94,7 +94,7 @@ export function AudienceCarousel() {
 
   return (
     <div className="relative" aria-label={AUDIENCE.subtitle}>
-      <div className="mb-5 flex justify-end gap-2">
+      <div className="mb-5 hidden justify-end gap-2 md:flex">
         <button
           type="button"
           onClick={scrollPrev}
@@ -131,7 +131,7 @@ export function AudienceCarousel() {
         </div>
       </div>
 
-      <p className="mt-5 font-sans text-[0.65rem] font-medium uppercase tracking-[0.2em] text-muted/50">
+      <p className="mt-5 font-sans text-[0.5rem] font-medium uppercase tracking-[0.18em] text-muted/50 md:text-[0.65rem] md:tracking-[0.2em]">
         Arraste para o lado
       </p>
     </div>

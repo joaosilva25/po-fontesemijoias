@@ -9,7 +9,7 @@ export function SiteFooter() {
         <BrandMark size="md" />
 
         <p className="font-sans text-[0.7rem] leading-relaxed tracking-wide text-white/40">
-          &copy; {YEAR} Xingyu · Fonte das Semijoias. Todos os direitos reservados.
+          &copy; {YEAR} Xingyu · Todos os direitos reservados.
         </p>
       </div>
     </footer>

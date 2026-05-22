@@ -15,6 +15,7 @@ type ScrollSectionProps = {
   variant?: ScrollSectionVariant
   withBackdrop?: boolean
   backdropGrayscale?: boolean
+  backdropProminent?: boolean
 }
 
 const variants = {
@@ -28,13 +29,17 @@ export function ScrollSection({
   variant = 'default',
   withBackdrop = true,
   backdropGrayscale = true,
+  backdropProminent = false,
 }: ScrollSectionProps) {
   const prefersReducedMotion = useReducedMotion()
 
   const rootClassName = `relative ${className}`.trim()
   const content = withBackdrop ? (
     <>
-      <SectionBackdrop grayscale={backdropGrayscale} />
+      <SectionBackdrop
+        grayscale={backdropGrayscale}
+        prominent={backdropProminent}
+      />
       <div className="relative z-10">{children}</div>
     </>
   ) : (

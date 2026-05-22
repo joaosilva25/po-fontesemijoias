@@ -50,7 +50,7 @@ export function EventPage() {
 
 
 
-          <ScrollSection backdropGrayscale={false}>
+          <ScrollSection backdropGrayscale={false} backdropProminent>
 
             <FinalCtaSection />
 
