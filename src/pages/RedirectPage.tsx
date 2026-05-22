@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { WHATSAPP_GROUP_URL } from '../constants/event'
 
-const DELAY_MS = 1100
+const DELAY_MS = 1000
 
 export function RedirectPage() {
   useEffect(() => {
