@@ -15,7 +15,7 @@ export function FinalCtaSection() {
 
         <Ornament className="my-8 justify-center" />
 
-        <p className="max-w-lg font-sans text-base leading-relaxed text-muted md:text-lg">
+        <p className="max-w-lg font-sans text-sm leading-relaxed text-muted md:text-lg">
           {FINAL_CTA.description}
         </p>
 

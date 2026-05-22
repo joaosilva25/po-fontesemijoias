@@ -77,7 +77,7 @@ export function ImportSection() {
 
           <div className="mt-14 text-center md:mt-16">
             <Ornament className="mb-7 justify-center" />
-            <p className="text-sm font-regular leading-relaxed text-gold/65 md:text-lg">
+            <p className="text-sm font-regular leading-relaxed text-ink md:text-lg">
               {IMPORT.closing}
             </p>
           </div>
