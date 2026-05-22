@@ -3,7 +3,10 @@ export const WHATSAPP_GROUP_URL =
 
 export const EVENT_GROUP_URL = '/redirect'
 
-export const EVENT_DATES = 'De 09 a 11 de Junho | Aulas e lives especiais'
+export const EVENT_DATES = {
+  range: 'De 09 a 11 de Junho',
+  detail: 'Aulas e lives especiais',
+} as const
 
 export const HERO = {
   title: {

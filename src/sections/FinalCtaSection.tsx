@@ -25,7 +25,7 @@ export function FinalCtaSection() {
           </a>
         </div>
 
-        <p className="mt-6 font-sans text-sm text-muted/70">{FINAL_CTA.note}</p>
+        <p className="mt-6 font-sans text-xs leading-relaxed text-muted/70 md:text-sm">{FINAL_CTA.note}</p>
       </Container>
     </section>
   )

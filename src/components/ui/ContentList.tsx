@@ -27,10 +27,10 @@ export function ContentListItem({
   title,
 }: ContentListItemProps) {
   return (
-    <article className="group flex flex-col gap-3 md:flex-row md:gap-8">
+    <article className="group flex flex-col items-center gap-3 text-center md:flex-row md:items-start md:gap-8 md:text-left">
       {step && (
         <span
-          className="shrink-0 font-display text-3xl tabular-nums leading-none text-gold/25 transition-colors duration-300 group-hover:text-gold/50 md:w-10 md:pt-0.5"
+          className="hidden shrink-0 font-display text-3xl tabular-nums leading-none text-gold/25 transition-colors duration-300 group-hover:text-gold/50 md:block md:w-10 md:pt-0.5"
           aria-hidden="true"
         >
           {step}
@@ -38,7 +38,7 @@ export function ContentListItem({
       )}
 
       <div
-        className={`min-w-0 flex-1 ${step ? 'border-t border-gold/12 pt-4 transition-colors duration-300 group-hover:border-gold/30 md:border-l md:border-t-0 md:pl-7 md:pt-0.5' : ''}`}
+        className={`min-w-0 flex-1 ${step ? 'w-full border-t border-gold/12 pt-4 transition-colors duration-300 group-hover:border-gold/30 md:border-l md:border-t-0 md:pl-7 md:pt-0.5' : ''}`}
       >
         <p className="mb-2.5 font-sans text-[0.62rem] font-medium uppercase tracking-[0.22em] text-gold/65 md:mb-3">
           {label}

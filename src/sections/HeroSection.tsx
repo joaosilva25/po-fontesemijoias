@@ -8,9 +8,9 @@ import { Container } from '../components/ui/Container'
 
 import { BrandMark } from '../components/ui/BrandMark'
 
-import { SectionEyebrow } from '../components/ui/SectionEyebrow'
+import { HeroEventDates } from '../components/ui/HeroEventDates'
 
-import { EVENT_DATES, EVENT_GROUP_URL, HERO } from '../constants/event'
+import { EVENT_GROUP_URL, HERO } from '../constants/event'
 
 import { heroContainer, heroItem, heroItemFade, heroViewport } from '../lib/motion'
 
@@ -87,11 +87,11 @@ export function HeroSection() {
 
               <div className="my-8 flex justify-center md:my-9">
 
-                <SectionEyebrow className="mb-0" size="lg">{EVENT_DATES}</SectionEyebrow>
+                <HeroEventDates />
 
               </div>
 
-              <p className="max-w-2xl font-sans text-base leading-relaxed text-ink-soft md:text-lg">
+              <p className="mt-2 max-w-2xl font-sans text-base leading-relaxed text-ink-soft sm:mt-0 md:text-lg">
 
                 {HERO.subtitle}
 
@@ -189,7 +189,7 @@ export function HeroSection() {
 
               <motion.div variants={heroItem} className="mt-8 flex justify-center">
 
-                <SectionEyebrow className="mb-0" size="lg">{EVENT_DATES}</SectionEyebrow>
+                <HeroEventDates />
 
               </motion.div>
 
@@ -199,7 +199,7 @@ export function HeroSection() {
 
                 variants={heroItem}
 
-                className="max-w-2xl font-sans text-base leading-relaxed text-ink-soft md:text-lg"
+                className="mt-2 max-w-2xl font-sans text-base leading-relaxed text-ink-soft sm:mt-0 md:text-lg"
 
               >
 
