@@ -78,15 +78,15 @@ export function HeroSection() {
 
               </div>
 
-              <div className="mx-auto mt-6 w-full max-w-2xl text-center md:mt-10">
+              <div className="mx-auto mt-6 w-full max-w-none text-center sm:max-w-2xl md:mt-10">
 
-                <p className="font-sans text-base leading-relaxed text-ink-soft md:text-lg">
+                <p className="font-sans text-base leading-relaxed text-pretty text-ink-soft md:text-lg">
 
                   {HERO.subtitle}
 
                 </p>
 
-                <p className="mt-4 font-sans text-sm leading-relaxed text-muted md:mt-5 md:text-[0.9375rem]">
+                <p className="mt-4 font-sans text-base leading-relaxed text-pretty text-muted md:mt-5 md:text-[0.9375rem]">
 
                   {HERO.audience}
 
@@ -190,11 +190,11 @@ export function HeroSection() {
 
                 variants={heroItem}
 
-                className="mx-auto mt-6 w-full max-w-2xl text-center md:mt-10"
+                className="mx-auto mt-6 w-full max-w-none text-center sm:max-w-2xl md:mt-10"
 
               >
 
-                <p className="font-sans text-base leading-relaxed text-ink-soft md:text-lg">
+                <p className="font-sans text-base leading-relaxed text-pretty text-ink-soft md:text-lg">
 
                   {HERO.subtitle}
 
@@ -202,7 +202,7 @@ export function HeroSection() {
 
 
 
-                <p className="mt-4 font-sans text-sm leading-relaxed text-muted md:mt-5 md:text-[0.9375rem]">
+                <p className="mt-4 font-sans text-sm leading-relaxed text-pretty text-muted md:mt-5 md:text-[0.9375rem]">
 
                   {HERO.audience}
 

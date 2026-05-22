@@ -17,7 +17,7 @@ export const HERO = {
   subtitle:
     'Entre para o evento e entenda como funciona o caminho por trás das peças que chegam ao mercado: da fábrica na China até a revenda no Brasil.',
   audience:
-    'Um evento para quem já vende semijoias, quer começar a vender ou busca um fornecedor com mais variedade, qualidade e oportunidade de lucro.',
+    'Um evento para quem já vende semijoias, quer começar a vender ou busca um fornecedor com mais variedade, qualidade e oportunidade de\u00A0lucro.',
   cta: 'Entrar no grupo do evento',
 } as const
 

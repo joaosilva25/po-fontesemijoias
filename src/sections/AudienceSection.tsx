@@ -34,7 +34,7 @@ export function AudienceSection() {
       <Container>
         <div className="mx-auto mt-14 max-w-lg text-center md:mt-16">
           <Ornament className="mb-7 justify-center" />
-          <p className="text-base font-regular leading-relaxed text-gold/65 md:text-lg">
+          <p className="text-sm font-regular leading-relaxed text-gold/65 md:text-lg">
             &ldquo;{AUDIENCE.closing}&rdquo;
           </p>
         </div>
