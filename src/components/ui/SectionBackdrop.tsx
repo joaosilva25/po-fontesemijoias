@@ -11,7 +11,7 @@ export function SectionBackdrop({
     <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
       <div
         className={`absolute inset-0 bg-[url('/BannerMobile.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/Banner.png')] ${
-          prominent ? 'opacity-55 md:opacity-40' : 'opacity-35 md:opacity-25'
+          prominent ? 'opacity-55 md:opacity-40' : 'opacity-40 md:opacity-25'
         } ${grayscale ? 'grayscale' : ''}`}
       />
       <div
