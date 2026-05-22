@@ -19,12 +19,12 @@ export function SectionHeader({
   const alignClass = align === 'center' ? 'text-center mx-auto items-center' : 'text-left items-start'
 
   const widthClass =
-    align === 'center' ? 'w-full max-w-[19rem] min-[400px]:max-w-[21rem] sm:max-w-3xl' : 'max-w-3xl'
+    align === 'center' ? 'w-full max-w-[21rem] min-[400px]:max-w-[23rem] sm:max-w-3xl' : 'max-w-3xl'
 
   return (
     <header className={`flex flex-col ${widthClass} ${alignClass}`}>
       {eyebrow && <SectionEyebrow>{eyebrow}</SectionEyebrow>}
-      <h2 className="font-display text-[clamp(1.625rem,4.8vw,2.75rem)] font-normal leading-[1.22] tracking-normal text-balance text-pretty text-ink">
+      <h2 className="font-display text-[clamp(2rem,6.5vw,2.75rem)] font-normal leading-[1.2] tracking-normal text-balance text-pretty text-ink">
         <span>{title}</span>
         {titleHighlight && (
           <>
