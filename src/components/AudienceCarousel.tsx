@@ -94,7 +94,12 @@ export function AudienceCarousel() {
 
   return (
     <div className="relative" aria-label={AUDIENCE.subtitle}>
-      <div className="mb-5 hidden justify-end gap-2 md:flex">
+      <div className="mb-4 flex items-center justify-between gap-4 md:mb-5 mt-4">
+        <p className="shrink-0 text-left font-sans text-[0.5rem] font-medium uppercase tracking-[0.18em] text-muted/50 md:text-[0.65rem] md:tracking-[0.2em]">
+          Arraste para o lado
+        </p>
+
+        <div className="hidden shrink-0 gap-2 md:flex">
         <button
           type="button"
           onClick={scrollPrev}
@@ -113,6 +118,7 @@ export function AudienceCarousel() {
         >
           <ChevronRight className="h-4 w-4" strokeWidth={2} />
         </button>
+        </div>
       </div>
 
       <div className="overflow-hidden" ref={emblaRef}>
@@ -130,10 +136,6 @@ export function AudienceCarousel() {
           })}
         </div>
       </div>
-
-      <p className="mt-5 font-sans text-[0.5rem] font-medium uppercase tracking-[0.18em] text-muted/50 md:text-[0.65rem] md:tracking-[0.2em]">
-        Arraste para o lado
-      </p>
     </div>
   )
 }
