@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 import type { ReactNode } from 'react'
 
 type ButtonProps = {
@@ -6,7 +5,6 @@ type ButtonProps = {
   href: string
   variant?: 'primary' | 'outline'
   className?: string
-  showArrow?: boolean
 }
 
 const variants = {
@@ -24,7 +22,6 @@ export function Button({
   href,
   variant = 'primary',
   className = '',
-  showArrow = true,
 }: ButtonProps) {
   const external = isExternalHref(href)
 
@@ -37,13 +34,6 @@ export function Button({
       className={`group ${variants[variant]} ${className}`}
     >
       {children}
-      {/* {showArrow && variant === 'primary' && (
-        <ArrowRight
-          size={15}
-          strokeWidth={2}
-          className="transition-transform duration-300 group-hover:translate-x-1"
-        />
-      )} */}
     </a>
   )
 }

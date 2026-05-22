@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 import { Container } from '../components/ui/Container'
 import { Ornament } from '../components/ui/Ornament'
 import { SectionEyebrow } from '../components/ui/SectionEyebrow'
@@ -23,11 +22,6 @@ export function FinalCtaSection() {
         <div className="mt-9">
           <a href={EVENT_GROUP_URL} className="btn-cinematic group">
             {FINAL_CTA.cta}
-            {/* <ArrowRight
-              size={15}
-              strokeWidth={2}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            /> */}
           </a>
         </div>
 
