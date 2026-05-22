@@ -29,13 +29,13 @@ export function ScrollToTop() {
       type="button"
       onClick={scrollToTop}
       aria-label="Voltar ao topo"
-      className={`fixed bottom-5 right-5 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white text-cream shadow-[0_2px_12px_-2px_rgba(0,0,0,0.35)] transition-all duration-300 hover:bg-white/90 hover:text-cream md:bottom-6 md:right-6 ${
+      className={`fixed bottom-5 right-5 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white text-cream shadow-[0_2px_12px_-2px_rgba(0,0,0,0.35)] transition-all duration-300 hover:bg-white/90 hover:text-cream md:bottom-6 md:right-6 md:h-12 md:w-12 ${
         visible
           ? 'pointer-events-auto translate-y-0 opacity-100'
           : 'pointer-events-none translate-y-1 opacity-0'
       }`}
     >
-      <ChevronUp className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
+      <ChevronUp className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
     </button>
   )
 }
