@@ -3,8 +3,16 @@ import { WHATSAPP_GROUP_URL } from '../constants/event'
 
 const DELAY_MS = 1000
 
+function trackMetaLead() {
+  if (typeof window.fbq === 'function') {
+    window.fbq('track', 'Lead')
+  }
+}
+
 export function RedirectPage() {
   useEffect(() => {
+    trackMetaLead()
+
     const timer = setTimeout(() => {
       window.location.href = WHATSAPP_GROUP_URL
     }, DELAY_MS)
