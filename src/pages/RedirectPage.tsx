@@ -5,11 +5,6 @@ const DELAY_MS = 1000
 
 export function RedirectPage() {
   useEffect(() => {
-    ;(window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.(
-      'track',
-      'Lead',
-    )
-
     const timer = setTimeout(() => {
       window.location.href = WHATSAPP_GROUP_URL
     }, DELAY_MS)
