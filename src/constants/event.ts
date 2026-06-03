@@ -1,5 +1,5 @@
 export const WHATSAPP_GROUP_URL =
-  'https://chat.whatsapp.com/GgiaeKuxGMB5uSZakNWG2y'
+  'https://chat.whatsapp.com/HqiL10jphxZGZL2FoJeYKn?mode=gi_t'
 
 export const EVENT_GROUP_URL = '/redirect'
 
